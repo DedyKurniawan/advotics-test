@@ -1,0 +1,21 @@
+Getting Started
+1. Install Nodejs from Nodejs Official Page
+2. Open your terminal
+3. Navigate to the project
+4. Run npm install or yarn install if you use Yarn
+5. Run npm run dev or yarn serve to start a local development server
+6. A new tab will be opened in your browser
+   You can also run additional npm tasks such as
+
+App running at:
+- Local:   http://localhost:8080/
+
+
+
+npm run build to build your app for production
+npm run lint to run linting.
+# Vue-cli
+We used the latest 3.x Vue CLI which aims to reduce project configuration to as little as possible. Almost everything is inside package.json + some other related files such as babel.config.js, .eslintrc.js and postcss.config.js
+
+# Element-UI
+Vue Material Dashboard also uses element-ui components and restyles them to achieve consistent and homogenous interface with the existing custom components and general UI of the dashboard.

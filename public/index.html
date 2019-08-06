@@ -1,0 +1,82 @@
+<!--
+
+=========================================================
+* Vue Material Dashboard - v1.2.1
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/vue-material-dashboard
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/vue-material-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" sizes="96x96" href="<%= webpackConfig.output.publicPath %>favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Vue Material Dashboard by Creative Tim</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!--  Fonts and icons     -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+</head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+    <script>
+      import DatePicker from 'vue2-datepicker'
+      
+      export default {
+        components: { DatePicker },
+        data() {
+          return {
+            time1: '',
+            time2: '',
+            time3: '',
+            // custom lang
+            lang: {
+              days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+              months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+              pickers: ['next 7 days', 'next 30 days', 'previous 7 days', 'previous 30 days'],
+              placeholder: {
+                date: 'Select Date',
+                dateRange: 'Select Date Range'
+              }
+            },
+            // custom range shortcuts
+            shortcuts: [
+              {
+                text: 'Today',
+                onClick: () => {
+                  this.time3 = [ new Date(), new Date() ]
+                }
+              }
+            ],
+            timePickerOptions:{
+              start: '00:00',
+              step: '00:30',
+              end: '23:30'
+            }
+          }
+        }
+      }
+      </script>
+<date-picker v-bind:options="object_with_properties"></date-picker>      
+  </body>
+</html>
